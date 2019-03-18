@@ -1,3 +1,6 @@
+
+//PACKAGE.CPP//
+
 #include <iostream>
 #include <string>
 #include "package.h"
@@ -40,6 +43,7 @@ package::package(string sname, string saddress, string scity, string sstate, lon
   signatureConfirmation = sigConf;
 }
 
+/**
 void package:: setName(string n)
 {
   senderName = n;
@@ -176,7 +180,7 @@ string package::getInsurance()const
   return insuranceType;
 }
 
-
+**/
 
 double package::calculateCost()
 {
