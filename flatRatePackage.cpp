@@ -1,3 +1,6 @@
+
+//FLATRATE.CPP
+
 #include<iostream>
 #include <string>
 #include "flatRatePackage.h"
