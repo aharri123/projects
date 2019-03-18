@@ -33,7 +33,8 @@ class package
   package();
   package(string, string, string, string, long, string, string, string, string, long, string, string, double, double, string,string);
 
-  void setName(string);
+ /** 
+ void setName(string);
   void setAddress(string);
   void setCity(string);
   void setState(string);
@@ -68,7 +69,7 @@ class package
   double getWeight()const;
   double getOunce()const;
   string getInsurance()const;
-
+**/
   double calculateCost();
   void printPackage();
 };
