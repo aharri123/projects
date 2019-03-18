@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#ifndef INVENTORY_H
+#define INVENTORY_H
+#include "package.h"
+#include "flatRatePackage.h"
+#include "overnightPackage.h"
+using namespace std;
+
+class PackageInventory
+{
+ protected:
+  vector<package>packages;
+  vector<overNightPackage>oPackages;
+  vector<FlatRatePackage>fPackages;
+
+ public:
+  PackageInventory();
+  
+  void CreateNewPackage(string sname1, string saddress1, string scity1, string sstate1, long szip1, string recname1,string raddress1, string rcity1, string rstate1, long rzip1,string label1, string date1,double weight1, double ounce1,string insurance1, string sigConf1);
+  
+  void CreateNewOvernight(string &sname2,string &saddress2, string &scity2, string &sstate2, long &szip2, string &recname2, string &raddress2,string &rcity2, string &rstate2, long &rzip2, string &label2, string &date2, double &weight2, double &ounce2, string &insurance2,string &sigConf2,string &track,double &onf);
+  
+  void CreateNewFlatRate(string &sname3, string &saddress3, string &scity3, string &sstate3, long &szip3, string &recname3,string &raddress3, string &rcity3, string &rstate3, long &rzip3,string &label3, string &date3,double &weight3, double &ounce3,string &insurance3, string &sigConf3,string &type3,double &len, double &wid, double &hei);
+
+  void PrintAllPackages();
+  void PrintAllOvernightPackages();
+  void PrintAllFlatRatePackages();
+  void calculateTotalCost(string typeToPrint);
+  void processFile(string sfile);
+    
+};
+#endif
