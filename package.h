@@ -1,3 +1,6 @@
+
+//PACKAGE.H
+
 #include <iostream>
 #include <string>
 #ifndef PACKAGE_H
@@ -76,3 +79,48 @@ class package
 #endif
 
   
+
+
+//PACKAGE.CPP//
+
+#include <iostream>
+#include <string>
+#include "package.h"
+using namespace std;
+
+
+package::package()
+{
+  senderName = "";
+  senderAddress = "";
+  senderCity = "";
+  senderState = "";
+  senderZip = 0;
+  label = "";
+  date="";
+  costPerOunce = 0.0;
+  insuranceType = "";
+  signatureConfirmation = "";
+}
+
+package::package(string sname, string saddress, string scity, string sstate, long szip, string rname,string raddress, string rcity, string rstate, long rzip,string constructorlabel, string constructordate,double constructorweight, double constructorounce, string constructorinsurance, string sigConf)
+{
+  senderName = sname;
+  senderAddress = saddress;
+  senderCity = scity;
+  senderState = sstate;
+  senderZip = szip;
+
+  recipName = rname;
+  recipAddress = raddress;
+  recipCity = rcity;
+  recipState = rstate;
+  recipZip = rzip;
+
+  label = constructorlabel;
+  date = constructordate;
+  weight = constructorweight;
+  costPerOunce = constructorounce;
+  insuranceType = constructorinsurance;
+  signatureConfirmation = sigConf;
+}
