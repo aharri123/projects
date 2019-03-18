@@ -124,3 +124,68 @@ package::package(string sname, string saddress, string scity, string sstate, lon
   insuranceType = constructorinsurance;
   signatureConfirmation = sigConf;
 }
+
+
+
+double package::calculateCost()
+{
+  //INSURANCE FEES//
+  double insuranceFee;
+  double signatureFee;
+  if (insuranceType == "none")
+    {
+      insuranceFee = 0;
+    }
+ if (insuranceType == "upto1000")
+    {
+      insuranceFee = 5.25;
+    }
+  if (insuranceType == "upto5000")
+    {
+      insuranceFee = 5.50;
+    }
+
+  //SIGNATURE CONFIRMATION FEES//
+  if (signatureConfirmation == "none")
+    {
+      signatureFee = 0;
+    }
+  if (signatureConfirmation == "sign")
+    {
+      signatureFee = 2.90;
+    }
+  double cost = (weight * costPerOunce)+ insuranceFee;
+
+  return cost;
+}
+
+void package::printPackage()
+{
+  cout<<"sender: "<<senderName<<endl;
+  cout<<senderAddress<<endl;
+  cout<<senderCity<<", ";
+  cout<<senderState<<" ";
+  cout<<senderZip<<" "<<endl;
+  cout<<"Recipient: "<<recipName<<endl;
+  cout<<recipAddress<<" "<<endl;
+  cout<<recipCity<<", ";
+  cout<<recipState<<" ";
+  cout<<recipZip<<" "<<endl;
+  cout<<"Label: "<<label<<endl;
+  cout<<"Mailed on: "<<date<<endl;
+  cout<<"weight: "<<weight<<endl;
+  cout<<"Cost per ounce: "<<costPerOunce<<endl;
+  cout<<"Insurance: "<<insuranceType<<endl;
+  cout<<"Signature: "<<signatureConfirmation<<endl;
+  double packagecost=calculateCost();
+  cout<<"Cost: "<<packagecost<<endl;
+}
+
+
+
+
+
+
+
+
+
