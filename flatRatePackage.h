@@ -1,3 +1,6 @@
+
+//FLATERATE.H
+
 #include <iostream>
 #include "package.h"
 #include <string>
